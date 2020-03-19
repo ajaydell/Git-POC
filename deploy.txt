@@ -1,3 +1,2 @@
 pipeline/adfcipipelinedevops.json
-pipeline/test.json
 dataset/adfcidatasetdevops.json
