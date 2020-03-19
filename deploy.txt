@@ -1,0 +1,2 @@
+pipeline/adfcipipelinedevops.json
+dataset/adfcidatasetdevops.json
