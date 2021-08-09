@@ -19,4 +19,4 @@ stages:
             targetType: 'inline'
             script: |
               pwd
-              ls -la
+              ls
