@@ -1,0 +1,22 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'vs2017-win2016'
+stages:
+  - stage: Build
+    jobs:
+    - job: Job_1
+      steps:
+        - task: PublishPipelineArtifact@1
+          displayName: Publish Scripts
+          inputs:
+            targetPath: './AJ_Jobs' 
+            artifactName: AJ_Jobs
+        - task: PowerShell@2
+          displayName: Script execution
+          inputs:
+            targetType: 'inline'
+            script: |
+              pwd
+              ls -la
