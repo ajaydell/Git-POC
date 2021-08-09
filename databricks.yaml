@@ -1,5 +1,5 @@
 trigger:
-- develop
+- master
 pool:
   vmImage: 'vs2017-win2016'
 stages:
@@ -20,3 +20,6 @@ stages:
               pwd
               cd ./AJ_Jobs
               ls
+              Install-Module azure.databricks.cicd.tools -Scope CurrentUser  -Force
+              Import-Module azure.databricks.cicd.tools 
+              echo "Deploying Databricks note books from QA environment"
