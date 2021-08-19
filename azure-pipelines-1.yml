@@ -7,13 +7,14 @@ trigger:
 - master
 
 pool:
-  vmImage: ubuntu-latest
-
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+  vmImage: 'vs2017-win2016'
+stages:
+  - stage: Build
+    jobs:
+    - job: Job_1
+      steps:
+        - task: PublishPipelineArtifact@1
+          displayName: Publish Scripts
+          inputs:
+            targetPath: './AJ_Jobs' 
+            artifactName: AJ_Jobs
