@@ -6,12 +6,50 @@
 			"type": "string",
 			"metadata": "Data Factory name",
 			"defaultValue": "ADFARMtest"
+		},
+		"dataFactory_properties_globalParameters_test_value": {
+			"type": "string",
+			"defaultValue": "ADFARMtest"
+		},
+		"dataFactory_properties_globalParameters_dilip_value": {
+			"type": "string",
+			"defaultValue": "DE_MAster"
+		},
+		"dataFactory_location": {
+			"type": "string",
+			"defaultValue": "westus"
+		},
+		"dataFactory_identity_type": {
+			"type": "string",
+			"defaultValue": "SystemAssigned"
 		}
 	},
 	"variables": {
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
+		{
+			"name": "[parameters('factoryName')]",
+			"type": "Microsoft.DataFactory/factories",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"globalParameters": {
+					"test": {
+						"type": "string",
+						"value": "[parameters('dataFactory_properties_globalParameters_test_value')]"
+					},
+					"dilip": {
+						"type": "string",
+						"value": "[parameters('dataFactory_properties_globalParameters_dilip_value')]"
+					}
+				}
+			},
+			"dependsOn": [],
+			"location": "[parameters('dataFactory_location')]",
+			"identity": {
+				"type": "[parameters('dataFactory_identity_type')]"
+			}
+		},
 		{
 			"name": "[concat(parameters('factoryName'), '/cicd')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",

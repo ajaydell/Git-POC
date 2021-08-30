@@ -7,6 +7,22 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "ADFARMtest"
 		},
+		"dataFactory_properties_globalParameters_test_value": {
+			"type": "string",
+			"defaultValue": "ADFARMtest"
+		},
+		"dataFactory_properties_globalParameters_dilip_value": {
+			"type": "string",
+			"defaultValue": "DE_MAster"
+		},
+		"dataFactory_location": {
+			"type": "string",
+			"defaultValue": "westus"
+		},
+		"dataFactory_identity_type": {
+			"type": "string",
+			"defaultValue": "SystemAssigned"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -33,6 +49,18 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"dataFactory_properties_globalParameters_test_value": {
+						"value": "[parameters('dataFactory_properties_globalParameters_test_value')]"
+					},
+					"dataFactory_properties_globalParameters_dilip_value": {
+						"value": "[parameters('dataFactory_properties_globalParameters_dilip_value')]"
+					},
+					"dataFactory_location": {
+						"value": "[parameters('dataFactory_location')]"
+					},
+					"dataFactory_identity_type": {
+						"value": "[parameters('dataFactory_identity_type')]"
 					}
 				}
 			},

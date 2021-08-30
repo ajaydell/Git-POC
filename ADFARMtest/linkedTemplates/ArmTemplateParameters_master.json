@@ -5,6 +5,18 @@
 		"factoryName": {
 			"value": "ADFARMtest"
 		},
+		"dataFactory_properties_globalParameters_test_value": {
+			"value": "ADFARMtest"
+		},
+		"dataFactory_properties_globalParameters_dilip_value": {
+			"value": "DE_MAster"
+		},
+		"dataFactory_location": {
+			"value": "westus"
+		},
+		"dataFactory_identity_type": {
+			"value": "SystemAssigned"
+		},
 		"containerUri": {
 			"value": ""
 		},
