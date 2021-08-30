@@ -11,6 +11,12 @@
 		"dataFactory_properties_globalParameters_dilip_value": {
 			"value": "DE_MAster"
 		},
+		"dataFactory_properties_globalParameters_adfaccounturl_value": {
+			"value": "https://portal.azure.com/"
+		},
+		"dataFactory_properties_globalParameters_purview_value": {
+			"value": "euwdctptdfapw01"
+		},
 		"dataFactory_location": {
 			"value": "westus"
 		},

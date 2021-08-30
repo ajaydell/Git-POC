@@ -15,6 +15,14 @@
 			"type": "string",
 			"defaultValue": "DE_MAster"
 		},
+		"dataFactory_properties_globalParameters_adfaccounturl_value": {
+			"type": "string",
+			"defaultValue": "https://portal.azure.com/"
+		},
+		"dataFactory_properties_globalParameters_purview_value": {
+			"type": "string",
+			"defaultValue": "euwdctptdfapw01"
+		},
 		"dataFactory_location": {
 			"type": "string",
 			"defaultValue": "westus"
@@ -55,6 +63,12 @@
 					},
 					"dataFactory_properties_globalParameters_dilip_value": {
 						"value": "[parameters('dataFactory_properties_globalParameters_dilip_value')]"
+					},
+					"dataFactory_properties_globalParameters_adfaccounturl_value": {
+						"value": "[parameters('dataFactory_properties_globalParameters_adfaccounturl_value')]"
+					},
+					"dataFactory_properties_globalParameters_purview_value": {
+						"value": "[parameters('dataFactory_properties_globalParameters_purview_value')]"
 					},
 					"dataFactory_location": {
 						"value": "[parameters('dataFactory_location')]"

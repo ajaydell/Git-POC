@@ -15,6 +15,14 @@
 			"type": "string",
 			"defaultValue": "DE_MAster"
 		},
+		"dataFactory_properties_globalParameters_adfaccounturl_value": {
+			"type": "string",
+			"defaultValue": "https://portal.azure.com/"
+		},
+		"dataFactory_properties_globalParameters_purview_value": {
+			"type": "string",
+			"defaultValue": "euwdctptdfapw01"
+		},
 		"dataFactory_location": {
 			"type": "string",
 			"defaultValue": "westus"
@@ -41,6 +49,14 @@
 					"dilip": {
 						"type": "string",
 						"value": "[parameters('dataFactory_properties_globalParameters_dilip_value')]"
+					},
+					"adfaccounturl": {
+						"type": "string",
+						"value": "[parameters('dataFactory_properties_globalParameters_adfaccounturl_value')]"
+					},
+					"purview": {
+						"type": "string",
+						"value": "[parameters('dataFactory_properties_globalParameters_purview_value')]"
 					}
 				}
 			},
@@ -64,7 +80,7 @@
 						"typeProperties": {
 							"variableName": "test2",
 							"value": {
-								"value": "@variables('test1')",
+								"value": "@concat('https//',pipeline().globalParameters.purview,'.catalog.purview.azure.com/api/atlas/v2/search/suggest')",
 								"type": "Expression"
 							}
 						}
