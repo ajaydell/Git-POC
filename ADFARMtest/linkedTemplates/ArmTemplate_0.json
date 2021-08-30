@@ -32,6 +32,12 @@
 						}
 					}
 				],
+				"parameters": {
+					"pram1": {
+						"type": "string",
+						"defaultValue": "ajay"
+					}
+				},
 				"variables": {
 					"test1": {
 						"type": "String",
