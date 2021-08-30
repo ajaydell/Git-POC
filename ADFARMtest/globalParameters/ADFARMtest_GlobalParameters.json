@@ -2,5 +2,9 @@
 	"test": {
 		"type": "string",
 		"value": "ADFARMtest"
+	},
+	"dilip": {
+		"type": "string",
+		"value": "DE_MAster"
 	}
 }
