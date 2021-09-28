@@ -1,0 +1,5 @@
+pool:
+  name: Azure Pipelines
+steps:
+- task: PublishPipelineArtifact@1
+  displayName: 'Publish Pipeline Artifact'
