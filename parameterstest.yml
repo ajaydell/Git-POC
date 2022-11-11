@@ -1,0 +1,23 @@
+trigger:
+- master
+pool:
+  vmImage: 'vs2017-win2016'
+parameters:
+- name: 'message'
+  type: string
+stages:
+  - stage: Build
+    jobs:
+    - job: Job_1
+      steps:
+        - task: PublishPipelineArtifact@1
+          displayName: Publish Scripts
+          inputs:
+            targetPath: './AJ_Jobs' 
+            artifactName: AJ_Jobs
+        - task: PowerShell@1
+          displayName: 'PowerShell Script'
+          inputs:
+            scriptType: inlineScript
+            inlineScript: |
+              Write-Host '${{ parameters.message }}'
