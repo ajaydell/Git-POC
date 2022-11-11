@@ -1,5 +1,5 @@
 trigger:
-- master
+- master_test
 pool:
   vmImage: 'windows-latest'
 parameters:
