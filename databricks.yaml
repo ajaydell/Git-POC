@@ -2,6 +2,9 @@ trigger:
 - master
 pool:
   vmImage: 'vs2017-win2016'
+parameters:
+- name: 'runPerfTests'
+  type: string
 stages:
   - stage: Build
     jobs:
